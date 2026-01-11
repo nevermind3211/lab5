@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Лаба 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✅ Task Manager</h1>
+            <p>Система управления задачами</p>
+        </header>
+
+        <main>
+            <section class="add-task">
+                <h2>➕ Новая задача</h2>
+                <form id="taskForm">
+                    <input type="text" id="taskInput" placeholder="Что нужно сделать?" required>
+                    <select id="prioritySelect">
+                        <option value="low">📉 Низкий приоритет</option>
+                        <option value="medium" selected>📊 Средний приоритет</option>
+                        <option value="high">📈 Высокий приоритет</option>
+                    </select>
+                    <button type="submit">Добавить</button>
+                </form>
+            </section>
+
+            <section class="task-list">
+                <h2>📋 Мои задачи</h2>
+                <div class="filters">
+                    <button class="filter active" data-filter="all">Все</button>
+                    <button class="filter" data-filter="active">Активные</button>
+                    <button class="filter" data-filter="completed">Выполненные</button>
+                </div>
+                <ul id="tasksContainer">
+                    <!-- Задачи будут здесь -->
+                    <li class="task placeholder">Задач пока нет. Добавьте первую!</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Лабораторная работа 5: Agile & Scrum | GitHub Issues</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
